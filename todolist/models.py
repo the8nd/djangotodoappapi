@@ -1,10 +1,11 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class ToDoList(models.Model):
     def __str__(self):
-        return self.username
-    username = models.CharField(max_length=20)
+        return self.user.username
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     description = models.CharField(max_length=150)
 
 

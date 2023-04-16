@@ -5,7 +5,7 @@ from todolist.models import ToDoList, ToDoItem
 class ToDoListSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ToDoList
-        fields = ['username', 'description']
+        fields = ['user_id', 'description']
 
 
 class ToDoItemSerializer(serializers.HyperlinkedModelSerializer):

@@ -21,5 +21,5 @@ from todolist.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', index),
-    path('api/todoapp/', include('todolist.api.urls'))
+    path('api/v1/', include('todolist.api.urls'))
 ]
